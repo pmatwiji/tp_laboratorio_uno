@@ -1,0 +1,26 @@
+# depslib dependency file v1.0
+1535840051 source:c:\users\x__bi\desktop\programacionuno\programacionuno\clase 2\menu\tplaboratoriouno\main.c
+	<stdio.h>
+	<stdlib.h>
+
+1535978616 source:d:\matwijiszyn\tps\tp_laboratio_1\tp1\main.c
+	<stdio.h>
+	<stdlib.h>
+
+1536030541 source:c:\users\x__bi\desktop\programacionuno\programacionuno\tps\tp_laboratio_1\tp1\main.c
+	<stdio.h>
+	<stdlib.h>
+	"funciones.h"
+
+1536011069 c:\users\x__bi\desktop\programacionuno\programacionuno\tps\tp_laboratio_1\tp1\biblioteca.h
+
+1536010773 c:\users\x__bi\desktop\programacionuno\programacionuno\tps\tp_laboratio_1\tp1\biblioteca.c
+	<stdio.h>
+	"biblioteca.h"
+
+1536031693 source:c:\users\x__bi\desktop\programacionuno\programacionuno\tps\tp_laboratio_1\tp1\funciones.c
+	<stdio.h>
+	"funciones.h"
+
+1536031736 c:\users\x__bi\desktop\programacionuno\programacionuno\tps\tp_laboratio_1\tp1\funciones.h
+
