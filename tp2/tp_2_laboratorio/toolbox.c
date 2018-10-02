@@ -58,7 +58,7 @@ int esNumerico(char str[])
     }
     return 1;
 }
-int esTelefono(char str[]);
+
 int esAlfaNumerico(char str[])
 {
     int i;

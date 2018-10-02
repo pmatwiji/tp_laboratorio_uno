@@ -1,4 +1,8 @@
 #ifndef arrayEmployees
+#define ILOGICO -1
+#define LIBRE 1
+#define OCUPADO 0
+
 
 
 typedef struct
@@ -40,14 +44,6 @@ int buscarLibre(sEmployee* arrayEmployees, int capacidad);
  */
 int addEmployee(sEmployee* arrayEmployees, int capacidad,int auxiliarId, char auxiliarName[], char auxiliarLastName[], float auxiliarSalary, int auxiliarSector);
 
-/** \brief
- *
- * \param myEmployee sEmployee
- * \return int
- *
- */
- int nuevoID(sEmployee* arrayEmployees, int capacidad);
-
  /** \brief find an Employee by Id en returns the index position in array.
  *
  * \param list Employee*
@@ -71,6 +67,15 @@ find a employee] - (0) if Ok
 int removeEmployee(sEmployee* arrayEmployees, int capacidad, int id);
 
 
+void modificarEmpleado(sEmployee* arrayEmployees, int capacidad);
 
+
+int menu();
+
+int sortEmployees(sEmployee* arrayEmployees, int cantidad);
+
+int printEmployees(sEmployee* arrayEmployees, int cantidad);
+
+void promediosSalario(sEmployee arrayEmployees[], int capacidad);
 
 
