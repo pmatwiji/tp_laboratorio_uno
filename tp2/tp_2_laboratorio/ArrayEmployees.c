@@ -77,7 +77,7 @@ int buscarLibre(sEmployee* arrayEmployees, int capacidad) //obtainfreeslot
 
 static int nuevoID()
 {
-    static int id=-1;
+    static int id=0;
 
     id ++;
 
