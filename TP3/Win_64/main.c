@@ -3,6 +3,8 @@
 #include "LinkedList.h"
 #include "Controller.h"
 #include "Employee.h"
+#include "menu.h"
+#include "validaciones.h"
 
 /****************************************************
     Menu:
@@ -21,7 +23,8 @@
 
 int main()
 {
-    int option = 0;
+    int option;
+    int test;
     LinkedList* listaEmpleados = ll_newLinkedList();
     do
     {
@@ -30,25 +33,87 @@ int main()
         switch(option)
         {
         case 1:
-            controller_loadFromText("data.csv",listaEmpleados);
+            test = controller_loadFromText("data.csv",listaEmpleados);
+            if(test==TRUE)
+            {
+                printf("Empleados cargados con exito.\n");
+            }
+            else
+            {
+                printf("Error, no se pudo cargar los datos.\n");
+                system("pause");
+                exit(EXIT_FAILURE);
+            }
+            system("pause");
+            system("cls");
             break;
         case 2:
+            controller_loadFromBinary("dataBinary.bin",listaEmpleados);
+            system("pause");
+            system("cls");
             break;
         case 3:
+            controller_addEmployee(listaEmpleados);
+            system("pause");
+            system("cls");
             break;
         case 4:
+            controller_editEmployee(listaEmpleados);
+            system("pause");
+            system("cls");
             break;
         case 5:
+            controller_removeEmployee(listaEmpleados);
+            system("pause");
+            system("cls");
             break;
         case 6:
+            controller_ListEmployee(listaEmpleados);
+            system("pause");
+            system("cls");
             break;
         case 7:
+            if(ll_len(listaEmpleados)>1)
+            {
+               controller_sortEmployee(listaEmpleados);
+            }
+            else
+            {
+                printf("No hay datos suficientes para ordenar.\n");
+            }
+
+            system("pause");
+            system("cls");
             break;
         case 8:
+            test = controller_saveAsText("dataText.csv",listaEmpleados);
+            if(test==TRUE)
+            {
+                printf("Datos guardados con exito.\n");
+            }
+            else
+            {
+                printf("Error, no se pudo guardar los datos.\n");
+            }
+            system("pause");
+            system("cls");
             break;
         case 9:
+            controller_saveAsBinary("dataBinary.bin",listaEmpleados);
+            if(test==TRUE)
+            {
+                printf("Datos guardados con exito.\n");
+            }
+            else
+            {
+                printf("Error, no se pudo guardar los datos.\n");
+            }
+            system("pause");
+            system("cls");
             break;
         case 10:
+            printf("Gracias por utilizar el sistema.\n");
+            ll_deleteLinkedList(listaEmpleados);
             break;
         }
     }

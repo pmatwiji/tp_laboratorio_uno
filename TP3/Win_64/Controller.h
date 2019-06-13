@@ -1,3 +1,6 @@
+#define FALSE 0
+#define TRUE 1
+
 int controller_loadFromText(char* path , LinkedList* pArrayListEmployee);
 int controller_loadFromBinary(char* path , LinkedList* pArrayListEmployee);
 int controller_addEmployee(LinkedList* pArrayListEmployee);
